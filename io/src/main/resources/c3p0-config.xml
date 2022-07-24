@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <named-config name="helloC3P0">
+        <!--8.0数据库连接基本信息-->
+        <!--<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/mysql80?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;rewriteBatchedStatements=true</property>
+        <property name="user">root</property>
+        <property name="password">abc123</property>-->
+        <!--5.7数据库连接基本信息-->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!--台式机-->
+<!--        <property name="jdbcUrl">jdbc:mysql://localhost:3306/dev?useUnicode=true&amp;characterEncoding=UTF-8&amp;rewriteBatchedStatements=true</property>-->
+        <!--笔记本-->
+        <property name="jdbcUrl">jdbc:mysql://localhost:13306/mysql57?useUnicode=true&amp;characterEncoding=UTF-8&amp;rewriteBatchedStatements=true</property>
+        <property name="user">root</property>
+        <property name="password">abc123</property>
+
+        <!--数据库连接池管理信息-->
+        <property name="acquireIncrement">50</property>
+        <property name="initialPoolSize">100</property>
+        <property name="minPoolSize">50</property>
+        <property name="maxPoolSize">1000</property>
+        <property name="maxStatements">50</property>
+        <property name="maxStatementsPerConnection">5</property>
+    </named-config>
+</c3p0-config>
